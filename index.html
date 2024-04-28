@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <title>About Me</title>
     <style>
-        body {
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
             background-color: #1e1e1e;
             color: #f1f1f1;
             font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
         }
 
         .header {
@@ -27,6 +34,7 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            flex: 1;  <!-- This ensures content takes as much space as needed to push the footer down -->
         }
 
         .section {
@@ -57,33 +65,35 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>About FluX</h1>
-    </div>
-
-    <div class="content">
-        <div class="section">
-            <h2>Who Am I?</h2>
-            <p>I'm FluX, a student and video game player with a passion for coding. I specialize in using webhooks (like Discord) in unconventional ways and have been coding since the age of 10.</p>
+    <div class="container">  <!-- Use a container for the full page layout -->
+        <div class="header">
+            <h1>About FluX</h1>
         </div>
 
-        <div class="section">
-            <h2>My Skills</h2>
-            <ul>
-                <li>Discord-related tasks</li>
-                <li>Python (basic)</li>
-                <li>HTML/CSS (basic)</li>
-            </ul>
+        <div class="content">
+            <div class="section">
+                <h2>Who Am I?</h2>
+                <p>I'm FluX, a student and video game player with a passion for coding. I specialize in using webhooks (like Discord) in unconventional ways and have been coding since the age of 10.</p>
+            </div>
+
+            <div class="section">
+                <h2>My Skills</h2>
+                <ul>
+                    <li>Discord-related tasks</li>
+                    <li>Python (basic)</li>
+                    <li>HTML/CSS (basic)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Contact</h2>
+                <p>Feel free to contact me on Discord: (St0rm.cc) and let's talk about something, idk.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Feel free to contact me on Discord: (St0rm.cc) and lets talk about something idk.</p>
+        <div class="footer">
+            &copy; 2024 FluX. All Rights Reserved.
         </div>
-    </div>
-
-    <div class="footer">
-        &copy; 2024 FluX. All Rights Reserved.
     </div>
 </body>
 </html>
